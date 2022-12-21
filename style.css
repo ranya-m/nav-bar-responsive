@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+nav {
+    background-color: #026326;
+    color: #F7F7F7;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+ul,
+ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 32px;
+}
+
+ul li,
+ul li a {
+    text-shadow: 2px 2px black;
+    text-decoration: none;
+    color: #F7F7F7;
+    transition: all 0.5s ease-in-out;
+}
+
+ul li:hover,
+ul li a:hover,
+.toggleNav i:hover {
+    color : rgb(12, 168, 12);
+}
+
+ul {
+    padding-top: 25px;
+    padding-right: 55px;    
+}
+
+.logoNav>img {
+    width: 105px;
+}
+
+.toggleNav {
+    display: none;
+    margin-top: 23px;
+    margin-right: 10px; 
+    width: 50px;
+    
+}
+
+.toggleNav i {
+    font-size: 22px;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:600px) {    
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+    .logoNav {
+        order:1; 
+        width: 70%;  
+    }
+    
+    .toggleNav {
+        display: block;
+        order:2; 
+    }
+
+    #menuDrop {
+        width: 100%;
+        order: 3;
+        padding-bottom: 40px;
+        /* display: none;   */
+    }
+
+    .active{
+        display: none;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;       
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    ul li {
+        margin: 0 auto !important;
+        text-align: center;
+    }
+}
+
+
+
